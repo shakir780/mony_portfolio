@@ -73,7 +73,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Section */}
         <div className="text-center text-sm text-gray-300 mt-8">
           © {new Date().getFullYear()} Monsurah. All rights reserved.
         </div>
