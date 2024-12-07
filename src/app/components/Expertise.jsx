@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useRef, useState } from "react";
 import MonyExpertisePic from "../assets/mony_pic1.jpg";
 import { motion, useInView } from "framer-motion";
+import Link from "next/link";
 
 const Expertise = () => {
   const ref = useRef(null);
@@ -166,14 +167,16 @@ const Expertise = () => {
               </div>
             </motion.div>
           ))}
-          <motion.button
-            initial={{ x: -100, opacity: 0 }}
-            animate={inView ? { x: 0, opacity: 1 } : {}}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="px-[20px] py-4 mt-[40px] hover:opacity-80 font-semibold bg-[#D8A25E] w-fit"
-          >
-            View Work
-          </motion.button>
+          <Link href="/video">
+            <motion.button
+              initial={{ x: -100, opacity: 0 }}
+              animate={inView ? { x: 0, opacity: 1 } : {}}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="px-[20px] py-4 mt-[40px] hover:opacity-80 font-semibold bg-[#D8A25E] w-fit"
+            >
+              View Work
+            </motion.button>
+          </Link>
         </div>
 
         {/* Image Section */}

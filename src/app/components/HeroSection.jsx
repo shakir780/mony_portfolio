@@ -15,11 +15,6 @@ const HeroSection = () => {
     hidden: { x: "-100%", opacity: 0 },
     visible: { x: 0, opacity: 1, transition: { duration: 1 } },
   };
-
-  const textVariants = {
-    hidden: { y: "50%", opacity: 0 },
-    visible: { y: 0, opacity: 1, transition: { duration: 1, delay: 0.5 } },
-  };
   return (
     <div className="bg-gray-100">
       <div className="py-[100px] ">
@@ -43,17 +38,19 @@ const HeroSection = () => {
           </motion.div>
 
           <div
-            className={`${roboto.variable} mt-[100px] flex gap-4 flex-col px-8`}
+            className={`${roboto.variable} mt-[60px] flex gap-4 flex-col px-8`}
           >
             <motion.span
               initial={{ y: "100%", opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               exit={{ x: "-100%", opacity: 0 }}
               transition={{ duration: 0.5, ease: "easeInOut", delay: 0.9 }}
-              className="text-3xl lg:text-4xl text-center lg:text-start font-normal leading-[60px] text-[#964B00]"
+              className="text-3xl xl:leading-[70px] lg:text-6xl text-center lg:text-start font-normal  text-[#964B00]"
             >
-              I'm Monsurah Kamal, a media creative passionate about storytelling
-              through visuals.
+              I'm Monsurah Kamal, <br className="hidden xl:block" />a media
+              creative, <br className="hidden xl:block" /> passionate
+              <br className="hidden xl:block" /> about storytelling through
+              <br className="hidden xl:block" /> visuals.
             </motion.span>
             <motion.span
               initial={{ y: "100%", opacity: 0 }}

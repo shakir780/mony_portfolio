@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 import {
   IoLogoFacebook,
@@ -6,13 +5,9 @@ import {
   IoLogoWhatsapp,
 } from "react-icons/io";
 import { IoLogoTiktok } from "react-icons/io5";
-import Logo from "../assets/logo.png";
-import { Dancing_Script } from "next/font/google";
-const DancingScript = Dancing_Script({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--font-dancing_script",
-});
+import { HiOutlineMail } from "react-icons/hi";
+import { FiPhone } from "react-icons/fi";
+
 const Footer = () => {
   return (
     <footer className="bg-[#a7631f] text-white py-10">
@@ -31,18 +26,29 @@ const Footer = () => {
           <div className="">
             <h2 className="text-lg font-bold mb-3">Contact</h2>
             <ul className="space-y-1">
-              <li className="text-gray-200 text-lg underline hover:text-gray-300">
-                lifewithmonsurah@gmail.com
-              </li>
-              <li className="text-gray-200 text-lg underline hover:text-gray-300">
-                +2347080187054
-              </li>
+              <div className="flex gap-2 items-center">
+                <span>
+                  <HiOutlineMail />
+                </span>
+
+                <li className="text-gray-200 text-lg underline cursor-pointer hover:text-gray-300">
+                  lifewithmonsurah@gmail.com
+                </li>
+              </div>
+              <div className="flex gap-2 items-center">
+                <span>
+                  <FiPhone />
+                </span>
+                <li className="text-gray-200 text-lg underline cursor-pointer hover:text-gray-300">
+                  +2347080187054
+                </li>
+              </div>
             </ul>
           </div>
 
           <div className="">
             <h2 className="text-lg font-bold mb-3">Socials</h2>
-            <div className="flex gap-3 items-center text-3xl ">
+            <div className="flex gap-3 items-center lg:text-3xl ">
               <a
                 className="hover:text-blue-400"
                 href="https://web.facebook.com/profile.php?id=61551210504654&mibextid=LQQJ4d&rdid=aBMhpr0DDtPA5ptC"
@@ -68,7 +74,7 @@ const Footer = () => {
                 aria-label="Chat on WhatsApp"
                 className=" hover:text-green-600"
               >
-                <IoLogoWhatsapp className="w-8 h-8" />
+                <IoLogoWhatsapp />
               </a>
             </div>
           </div>
