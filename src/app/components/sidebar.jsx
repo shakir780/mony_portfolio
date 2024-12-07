@@ -12,37 +12,6 @@ const DancingScript = Dancing_Script({
 });
 
 const Sidebar = ({ onClose, isOpen }) => {
-  const sidebarVariants = {
-    hidden: { y: "-100%", opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: { duration: 0.5, ease: "easeInOut" },
-    },
-    exit: {
-      y: "-100%",
-      opacity: 0,
-      transition: { duration: 0.5, ease: "easeInOut" },
-    },
-  };
-  const contentVariants = {
-    hidden: { opacity: 0, y: 20 },
-
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5, delay: 2 },
-    },
-  };
-
-  const staggerContainer = {
-    hidden: {},
-    visible: {
-      transition: {
-        staggerChildren: 0.3,
-      },
-    },
-  };
   if (!isOpen) return null;
 
   return (
@@ -100,7 +69,9 @@ const Sidebar = ({ onClose, isOpen }) => {
 
       <div className="flex mt-16 flex-col  w-full  justify-between items-center">
         <div className={`flex text-[#343131] flex-col text-3xl gap-4 `}>
-          <motion.span
+          <motion.a
+            href="/"
+            onClick={onClose}
             initial={{ x: "-100%", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: "-100%", opacity: 0 }}
@@ -108,8 +79,10 @@ const Sidebar = ({ onClose, isOpen }) => {
             className={`hover:underline transition-all duration-400 ease-in-out cursor-pointer`}
           >
             Home
-          </motion.span>
-          <motion.span
+          </motion.a>
+          <motion.a
+            href="/about"
+            onClick={onClose}
             initial={{ x: "-100%", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: "-100%", opacity: 0 }}
@@ -117,8 +90,10 @@ const Sidebar = ({ onClose, isOpen }) => {
             className="hover:underline transition-all duration-400 ease-in-out cursor-pointer"
           >
             About
-          </motion.span>
-          <motion.span
+          </motion.a>
+          <motion.a
+            href="/video"
+            onClick={onClose}
             initial={{ x: "-100%", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: "-100%", opacity: 0 }}
@@ -126,9 +101,10 @@ const Sidebar = ({ onClose, isOpen }) => {
             className="hover:underline transition-all duration-400 ease-in-out cursor-pointer"
           >
             Video
-          </motion.span>
+          </motion.a>
         </div>
         <motion.div
+          onClick={onClose}
           initial={{ x: "-100%", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: "-100%", opacity: 0 }}

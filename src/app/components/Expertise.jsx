@@ -103,7 +103,7 @@ const Expertise = () => {
     <div className="bg-gray-100">
       <div
         ref={ref}
-        className="py-[100px] px-[100px] gap-8 items-center flex xl:flex-row flex-col-reverse justify-between"
+        className="py-[100px] px-[20px] xl:px-[100px] gap-8 items-center flex xl:flex-row flex-col-reverse justify-between"
       >
         <div className="w-full flex flex-col gap-8">
           <motion.span
