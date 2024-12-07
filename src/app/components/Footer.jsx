@@ -21,7 +21,8 @@ const Footer = () => {
           <div className="">
             <h2 className="text-lg font-bold mb-3">About Monsurah</h2>
             <p className="text-sm text-gray-200">
-              Capturing the essence of your moments and stories through <br />
+              Capturing the essence of your moments and stories through{" "}
+              <br className="hidden xl:block" />
               stunning videography and photography. Let's bring your visions to
               life.
             </p>
